@@ -4,3 +4,4 @@ resources:
   - system-project.yaml
   - argocd.yaml
   - ingress-nginx.yaml
+  - tekton-pipeline.yaml

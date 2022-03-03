@@ -8,7 +8,7 @@ spec:
   sourceRepos:
     - https://kubernetes.github.io/ingress-nginx
     - https://argoproj.github.io/argo-helm
-    - https://cdfoundation.github.io/tekton-helm-chart/
+    - https://github.com/farwydi/cluster-wakingthedemon.git
   destinations:
     - namespace: "*"
       server: https://kubernetes.default.svc
