@@ -5,3 +5,4 @@ resources:
   - run.yaml
   - push-secret.yaml
   - build.yaml
+  - build-run.yaml
