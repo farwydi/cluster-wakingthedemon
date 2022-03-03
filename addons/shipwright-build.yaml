@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shipwright-build
+  namespace: argocd
+spec:
+  project: system
+  source:
+    repoURL: https://github.com/farwydi/cluster-wakingthedemon.git
+    targetRevision: main
+    path: addons/shipwright-build
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: shipwright-build
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - "CreateNamespace=true"

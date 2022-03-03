@@ -5,3 +5,4 @@ resources:
   - argocd.yaml
   - ingress-nginx.yaml
   - tekton-pipeline.yaml
+  - shipwright-build.yaml
