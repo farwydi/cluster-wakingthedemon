@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demon
+  namespace: argocd
+spec:
+  project: apps
+  source:
+    repoURL: https://github.com/farwydi/cluster-wakingthedemon.git
+    targetRevision: main
+    path: apps/demon
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - "CreateNamespace=true"
