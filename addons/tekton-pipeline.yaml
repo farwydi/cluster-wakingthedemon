@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tekton-pipeline
+  namespace: argocd
+spec:
+  project: system
+  source:
+    repoURL: https://github.com/farwydi/cluster-wakingthedemon.git
+    targetRevision: main
+    path: addons/tekton-pipeline
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tekton-pipelines
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - "CreateNamespace=true"
