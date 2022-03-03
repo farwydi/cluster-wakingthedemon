@@ -6,3 +6,4 @@ resources:
   - ingress-nginx.yaml
   - tekton-pipeline.yaml
   - shipwright-build.yaml
+  - sealed-secrets.yaml
