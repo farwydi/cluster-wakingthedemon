@@ -10,6 +10,6 @@ spec:
     name: buildpacks-v3
     kind: ClusterBuildStrategy
   output:
-    image: docker.io/${REGISTRY_ORG}/sample-nodejs:latest
+    image: docker.io/farwydi/sample-nodejs:latest
     credentials:
       name: push-secret
